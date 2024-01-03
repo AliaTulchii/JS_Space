@@ -1,0 +1,106 @@
+.header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-color: $body-color;
+    z-index: $z-fixed;
+}
+
+.nav{
+    position: relative;
+    height: $header-height;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo,
+.nav__toggle,
+.nav__close{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__logo{
+    color: $text-color;
+    column-gap: .5rem;
+    font-weight: $font-semi-bold;
+
+    & i{
+        font-size: 1.25rem;
+        font-weight: initial;
+    }
+}
+
+.nav__toggle,
+.nav__close{
+    width: 2rem;
+    height: 2rem;
+    background-color: $first-color-alt;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.nav__menu{
+    display: flex;
+
+
+    @media screen and (max-width: 1023px){
+        position: fixed;
+        top: 0;
+        right: -100%;
+        
+        flex-direction: column;
+        row-gap: 2.5rem;
+        background-color: $first-color;
+        width: 80%;
+        height: 100%;
+        padding: 6rem 3rem;
+        box-shadow: 0 0 16px hsla(268,58%, 4%, .2);
+        transition: right .4s;
+    }
+}
+
+.nav__list{
+    display: flex;
+    
+
+    @media screen and (max-width: 1023px){
+        flex-direction: column;
+        row-gap: 2.5rem;
+    }
+}
+
+.nav__link{
+    color: $text-color;
+    font-weight: $font-semi-bold;
+    transition: color .4s;
+
+    &:hover{
+    color: $title-color
+    }
+}
+
+.nav__button{
+    display: inline-block;
+    width: max-content;
+    padding: 1rem 3rem;
+    background-color: $first-color;
+    border: 2px solid $text-color;
+    border-radius: 4rem;
+    color: $title-color;
+    font-weight: $font-semi-bold;
+}
+
+.nav__close{
+    position: absolute;
+    top: .75rem;
+    right: 1.5rem;
+}
+
+.show-menu{
+    right: 0;
+}

@@ -13,6 +13,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (min-width: 1023px) {
+        height: calc($header-height + 2rem);
+    }
 }
 
 .nav__logo,
@@ -31,6 +35,14 @@
     & i{
         font-size: 1.25rem;
         font-weight: initial;
+
+        @media screen and (min-width: 1152px) {        
+            font-size: 3rem;
+        }
+    }
+
+    @media screen and (min-width: 1152px) {        
+        font-size: 1.5rem;
     }
 }
 
@@ -42,17 +54,24 @@
     border-radius: 50%;
     font-size: 1.25rem;
     cursor: pointer;
+
+    @media screen and (min-width: 1023px) {
+        display: none;
+    }
 }
 
 .nav__menu{
     display: flex;
 
+    @media screen and (min-width: 576px){
+        width: 60%;
+    }
+
 
     @media screen and (max-width: 1023px){
         position: fixed;
         top: 0;
-        right: -100%;
-        
+        right: -100%;        
         flex-direction: column;
         row-gap: 2.5rem;
         background-color: $first-color;
@@ -61,6 +80,12 @@
         padding: 6rem 3rem;
         box-shadow: 0 0 16px hsla(268,58%, 4%, .2);
         transition: right .4s;
+    }
+
+    @media screen and (min-width: 1023px) {
+        width: 100%;
+        align-items: center;
+        column-gap: 4.5rem;
     }
 }
 
@@ -71,6 +96,12 @@
     @media screen and (max-width: 1023px){
         flex-direction: column;
         row-gap: 2.5rem;
+    }
+
+    @media screen and (min-width: 1023px) {
+        margin-left: auto;
+        flex-direction: row;
+        column-gap: 4.5rem;
     }
 }
 

@@ -1,40 +1,93 @@
 .home{
     position: relative;
     height: 100vh;
+
+    @media screen and (min-width: 768px){
+        display: grid;
+        place-content: center;
+    }
 }
 
 .home__container{
     padding-top: 7rem;
     display: grid;
     row-gap: 3rem;
+
+    @media screen and (min-width: 376px) and (min-height: 800px){
+        padding-top: 10rem;
+    }
+
+    @media screen and (min-width: 576px){
+        grid-template-columns: 400px;
+        justify-content: center;
+    }
+
+    @media screen and (min-width: 768px){
+        grid-template-columns: repeat(2, 350px);
+        padding-top: 0;
+    }
+
+    @media screen and (min-width: 1152px) {
+        grid-template-columns: 460px 650px;
+        align-items: center;
+        z-index: 5;
+    }
 }
 
 .home__content{
     text-align: center;
+
+    @media screen and (min-width: 768px){
+        text-align: initial;
+    }
 }
 
 .home__subtitle{
     font-size: $small-font-size;
     margin-bottom: .5rem;
     letter-spacing: 1px;
+
+    @media screen and (min-width: 1152px) {
+        font-size: $normal-font-size;
+        margin-bottom: .75rem;
+    }
 }
 
 .home__title{
     position: relative;
     width: max-content;
     margin: 0 auto .75rem;
-    font-size: $biggest-font-size;
     color: $title-color;
 
     & img{
         position: absolute;
         right: 0;
         bottom: 0;
+
+        @media screen and (min-width: 1152px) {
+            width: 250px;
+            right: -0.75rem;
+        }
     }
 
     & span{
         position: relative;
         z-index: 5;
+    }
+
+    @media screen and (max-width: 300px) {
+        font-size: 1.75rem;
+    }
+
+    @media screen and (min-width: 768px){
+        margin-inline: 0;
+        font-size: 2.5rem;
+    }
+
+    @media screen and (min-width: 1152px) {
+        letter-spacing: -3px;
+        margin-bottom: 1rem;
+        font-size: $biggest-font-size;
     }
 }
 
@@ -42,6 +95,11 @@
 .home__description{
     line-height: 150%;
     margin-bottom: 1.25rem;
+
+    @media screen and (min-width: 1152px) {
+        font-size: 1.2rem;
+        margin-bottom: 3rem;
+    }
 }
 
 .home__button{
@@ -66,16 +124,30 @@
     & img{
         position: absolute;
     }
+
+    @media screen and (min-width: 1152px) {
+        height: 450px;
+    }
 }
 
 .home__points{
     width: 320px;
     top: -1rem;
+
+    @media screen and (min-width: 1152px) {
+        width: 100%;
+        top: -2rem;
+        right: -1rem;
+    }
 }
 
 .home__rocket-box{
     width: 220px;
     position: relative;
+
+    @media screen and (min-width: 1152px) {        
+        width: 450px;
+    }
 }
 
 .home__js{
@@ -84,23 +156,43 @@
     right: 3.90rem;
     color: $body-color;
     z-index: 2;
+
+    @media screen and (min-width: 1152px) {  
+        font-size: 2.5rem;      
+        top: 9rem;
+        right: 7.90rem;
+    }
 }
 
 .home__rocket{
     width: 220px;
     z-index: 1;
+
+    @media screen and (min-width: 1152px) {        
+        width: 450px;
+    }
 }
 
 .home__planet-1{
     width: 110px;
     top: 1.25rem;
     left: -1rem;
+
+    @media screen and (min-width: 1152px) {        
+        width: 210px;
+        left: 5rem;
+    }
 }
 
 .home__planet-2{
     width: 70px;
     right: 0;
     top: -2.25rem;
+
+    @media screen and (min-width: 1152px) {        
+        width: 130px;
+        right: -2rem;
+    }
 }
 
 .home__cloud-1,
@@ -109,14 +201,27 @@ position: absolute;
 bottom: 0;
 max-width: initial;
 z-index: 0;
+
+@media screen and (min-width: 1152px) {        
+    bottom: -3rem;
+}
 }
 
 .home__cloud-2{
     width: 500px;
     right: -4rem;
+
+    @media screen and (min-width: 576px){
+        width: 80%;
+    }
 }
 
 .home__cloud-1{
     width: 700px;
     right: -6rem;
+
+    @media screen and (min-width: 576px){
+        width: 100%;
+        left:0;
+    }
 }

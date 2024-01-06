@@ -30,6 +30,21 @@ const linkAction = () => {
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 
+// paralax effect
+
+document.addEventListener("mousemove", parallax);
+
+function parallax(e) {
+    document.querySelectorAll(".object").forEach(function(move) {
+        let movingValue = move.getAttribute("data-value");
+        let x = (e.clientX * movingValue) / 250;
+        let y = (e.clientY * movingValue) / 250;
+
+        move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+
+    })
+}
+
 //gsap animation
 
 gsap.from('.home__points', 1.5, { opacity: 0, y: -300, delay: .2 })

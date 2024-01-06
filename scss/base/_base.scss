@@ -46,3 +46,33 @@
   .main {
     overflow: hidden; /* For animation */
   }
+
+  #stars > i {
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #d5cb46,
+                0 0 10px #d5cb46, 
+                0 0 15px #d5cb46;
+    animation: animate linear infinite; 
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+

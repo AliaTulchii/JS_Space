@@ -94,7 +94,7 @@ body {
   font-family: "Ubuntu", sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
-  background-color: hsl(269, 35%, 24%);
+  background-color: hsl(268, 70%, 9%);
   color: hsl(50, 96%, 55%);
   overflow: hidden;
 }
@@ -162,7 +162,7 @@ img {
   width: 100%;
   top: 0;
   left: 0;
-  border-color: hsl(269, 35%, 24%);
+  border-color: hsl(268, 70%, 9%);
   z-index: 100;
 }
 
@@ -547,6 +547,17 @@ img {
   .home__cloud-1 {
     width: 100%;
     left: -4px;
+  }
+}
+
+.quiz {
+  position: relative;
+  height: 80%;
+}
+@media screen and (min-width: 768px) {
+  .quiz {
+    display: grid;
+    place-content: center;
   }
 }
 

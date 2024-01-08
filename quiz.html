@@ -9,6 +9,7 @@
     <title>JS Space</title>
 </head>
 <body>
+    <section id="stars"></section>
     <header class="header" id="header">
         <nav class="nav container">
             <a href="./index.html" class="nav__logo">
@@ -44,21 +45,49 @@
         </nav>
     </header>
 
-    <main class="main">
-        <section id="stars"></section>
+    <main class="main">       
 
         <section class="quiz">
-            <div class="quiz__container container">
-                
+            <div class="quiz__container" id="quiz">
+
+                <div class="quiz-header" id="header">
+                    
+                    <h2 class="title">Loading question...</h2>
+        
+                    
+                    <h2 class="title">%title%</h2>
+                    <h3 class="summary">%message%</h3>
+                    <p class="result">%result%</p>
+                </div>
+        
+                <ul class="quiz-list" id="list">
+                    <li>
+                        <label>
+                            <input type="radio" class="answer" name="answer" />
+                            <span>Answer...</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" class="answer" name="answer" />
+                            <span>Answer...</span>
+                        </label>
+                    </li>
+                </ul>
+        
+                <button class="quiz-submit submit" id="submit">Answear</button>
+        
             </div>
 
-            <img src="./images/clouds-1.svg" alt="cloud" class="home__cloud-1 object" data-value="5">
-            <img src="./images/clouds-2.svg" alt="cloud" class="home__cloud-2 object" data-value="-1">
+            
         </section>
+        
+
     </main>
 
     <script src="./js/stars.js"></script>
     <script src="./js/quiz.js"></script>
+    <script src="./js/main.js"></script>
 
 </body>
 </html>

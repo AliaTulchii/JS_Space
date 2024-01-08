@@ -13,6 +13,7 @@
     font-weight: $font-medium;
     background-color: $body-color;
     color: $text-color;
+    overflow: hidden;
   }
   
   ul {
@@ -45,6 +46,7 @@
   
   .main {
     overflow: hidden; /* For animation */
+    // position: relative;
   }
 
   #stars > i {
@@ -74,5 +76,6 @@
         opacity: 0;
     }
 }
+
 
 

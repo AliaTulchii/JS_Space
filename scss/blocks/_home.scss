@@ -154,7 +154,7 @@
     position: absolute;
     top: 4.6rem;
     right: 3.90rem;
-    color: $body-color;
+    color: $text-color;
     z-index: 2;
 
     @media screen and (min-width: 1152px) {  
@@ -222,6 +222,6 @@ z-index: 0;
 
     @media screen and (min-width: 576px){
         width: 100%;
-        left:0;
+        left: -4px;;
     }
 }

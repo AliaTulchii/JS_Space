@@ -44,6 +44,7 @@ let questionIndex = 0;
 
 clearPage();
 showQuestion();
+submitBtn.onclick = checkAnswer;
 
 function clearPage() {
     headerContainer.innerHTML = '';
@@ -56,18 +57,93 @@ function showQuestion() {
     const title = headerTemplate.replace('%title%', questions[questionIndex]['question'])
     headerContainer.innerHTML = title;
 
-    
+    let answerNumber = 1;
     for (item of questions[questionIndex]['answers']) {
+        console.log(answerNumber, item)
         const questionTemplate = `
             <li>
                 <label>
-                    <input type="radio" class="answer" name="answer" />
+                    <input value="%number%" type="radio" class="answer" name="answer" />
                     <span>%answer%</span>
                 </label>
             </li>
         `;
 
-        const answerHTML = questionTemplate.replace('%answer%', item);
+        
+        const answerHTML = questionTemplate
+            .replace('%answer%', item)
+            .replace('%number%', answerNumber);
+        
+        console.log(answerHTML);
         listContainer.innerHTML += answerHTML;
+        answerNumber++;
      }
+}
+
+function checkAnswer() {
+    console.log('checkAnswer started');
+
+    const checkedRadio = listContainer.querySelector('input[type="radio"]:checked');
+    
+    if (!checkedRadio) {
+        submitBtn.blur()
+        return
+    }
+
+    const userAnswer = parseInt(checkedRadio.value);
+
+
+    if (userAnswer === questions[questionIndex]['correct']) {
+        score++;
+    }
+
+    if (questions.length - 1 !== questionIndex) {
+        console.log('its not last question')
+        questionIndex++;
+        clearPage();
+        showQuestion();
+        return;
+    } else {
+        console.log('its last question')
+        clearPage();
+        showResults();
+    }
+}
+
+function showResults(params) {
+    console.log('showResults started');
+
+    const resultsTemplate = `
+        <h2 class="title">%title%</h2>
+        <h3 class="summary">%message%</h3>
+        <p class="result">%result%</p>
+    `;
+
+    let title, message;
+
+    if (score === questions.length) {
+        title = 'Congratulations🥳';
+        message = 'You answered all the questions correctly!👩‍💻';
+    } else if ((score * 100) / questions.length) {
+        title = 'Not a bad result🥳';
+        message = 'You answered half of all questions correctly!😎';
+    } else {
+        title = 'Its worth trying to answer better🧐';
+        message = 'So far you have less than half of the correct answers!🥺';
+    }
+
+    let result = `${score} of ${questions.length}`;
+
+    const finalMessage = resultsTemplate
+        .replace('%title%', title)
+        .replace('%message%', message)
+        .replace('%result%', result);
+    
+    headerContainer.innerHTML = finalMessage;
+
+    submitBtn.blur();
+    submitBtn.innerHTML = 'Try again';
+    submitBtn.onclick = () => {
+        history.go()
+    };
 }

@@ -1,4 +1,4 @@
- export const questions = [
+    const questions = [
 	{
 		question: "Какой язык работает в браузере?",
 		answers: ["Java", "C", "Python", "JavaScript"],

@@ -1,34 +1,104 @@
-// import  {questions}  from "./questions";
+// const questions = require('./questions')
 const questions = [
 	{
-		question: "Какой язык работает в браузере?",
-		answers: ["Java", "C", "Python", "JavaScript"],
+		question: "What is the difference between == operator and ===?" ,
+        answers: [
+            "nothing, it's the same operator",
+            "with strict equality, type reduction is performed",
+            "in the case of non-strict equality, type reduction is not performed",
+            "with strict equality, type reduction is not performed",
+        ],
 		correct: 4,
 	},
 	{
-		question: "Что означает CSS?",
+		question: "Variable declared with const...",
 		answers: [
-			"Central Style Sheets",
-			"Cascading Style Sheets",
-			"Cascading Simple Sheets",
-			"Cars SUVs Sailboats",
+			"may be changed after announcement",
+			"must be initialized when declared",
+			"can store several values ​​at once",
+			"is initialized to undefined by default",
 		],
 		correct: 2,
 	},
 	{
-		question: "Что означает HTML?",
+		question: "What will be the result of this expression? Number('25.7px')",
 		answers: [
-			"Hypertext Markup Language",
-			"Hypertext Markdown Language",
-			"Hyperloop Machine Language",
-			"Helicopters Terminals Motorboats Lamborginis",
+			"25",
+			"257",
+			"25.7",
+			"NaN",
 		],
-		correct: 1,
+		correct: 4,
 	},
 	{
-		question: "В каком году был создан JavaScript?",
-		answers: ["1996", "1995", "1994", "все ответы неверные"],
+		question: "Select the variable name written in camelCase notation",
+        answers: [
+            "total_price",
+            "TOTAL_PRICE",
+            "TotalPrice",
+            "totalPrice",
+        ],
+		correct: 4,
+    },
+    {
+		question: "Variable declared with let...",
+        answers: [
+            "may not be changed after announcement",
+            "is initialized to undefined by default",
+			"must be initialized when declared",
+			"can store several values ​​at once",			
+        ],
 		correct: 2,
+    },
+    {
+		question: "Which of these values ​​results in true in the Boolean conversion?",
+        answers: [
+            "undefined",
+            "0",
+            "'false'",
+            "false",
+        ],
+		correct: 3,
+    },
+    {
+		question: "Which method will lowercase the string “MANGO”?",
+        answers: [
+            "“MANGO”.transform('lower-case')",
+            "“MANGO”.makeLowerCase()",
+            "“MANGO”.lowerCase()",
+            "“MANGO”.toLowerCase()",
+        ],
+		correct: 4,
+    },
+    {
+		question: "Select a non-existent data type",
+        answers: [
+            "Number",
+            "Boolean",
+            "Char",
+            "String",
+        ],
+		correct: 3,
+    },
+    {
+		question: "Select the correct pattern string entry with age variable interpolation",
+        answers: [
+            "`I'm {age} years old`",
+            "`I'm #{age} years old`",
+            "`I'm ${age} years old`",
+            "'I'm ${age} years old'",
+        ],
+		correct: 3,
+    },
+    {
+		question: "What will be the result of the expression 100 +2+”30”?",
+        answers: [
+            "'100230'",
+            "'132'",
+            "'10230'",
+            "132",
+        ],
+		correct: 3,
 	},
 ];
 

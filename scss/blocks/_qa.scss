@@ -1,28 +1,60 @@
+ul, ul li {
+	list-style:circle;
+}
+
 
 .qa{
+    height: 100vh;
     position: relative;
-    height: 80%;
     background-color: rgba(255, 255, 255, 0.699);
-    width: 60%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
-    padding: 1.5rem;
-    border-radius: 2rem;
+    padding: 2.5rem;
+    border-radius: 1rem;
     margin-top: 8rem;
     z-index: 5;
+    overflow-y: auto;
 
     @media screen and (min-width: 768px){
         display: grid;
         place-content: center;
-        margin-top: 14rem;
+        margin-top: 10rem;
+        margin-bottom: 2rem;
     }
+
+    &::-webkit-scrollbar {
+        width: 1em;
+        height: auto;
+        border-top-right-radius: 4rem;
+      }
+       
+    &::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      }
+       
+    &::-webkit-scrollbar-thumb {
+        background-color: $first-color;
+        outline: 1px solid rgb(133, 112, 144);
+        border-top-right-radius: 6rem;
+        border-bottom-right-radius: 6rem;
+
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: $first-color-alt;
+        outline: 1px solid rgb(130, 112, 144);
+      }
 }
+
+
 
 .qa__title{ 
     font-size: 24px;
     color: $first-color;
     font-weight: $font-bold;
     margin-bottom: 20px;
+    margin-top: 10px;
 
     @media screen and (min-width: 768px){
         font-size: 32px;
@@ -38,7 +70,7 @@
     font-size: 12px;
 
     &:hover{
-        color: hsl(335, 95%, 77%);
+        color: $text-color;
     }
 
     &:not(:last-child){
@@ -74,6 +106,7 @@
 .list-group__item-text{
     font-size: 12px;
     color: $title-color;
+    padding-bottom: 12px;
 
     @media screen and (min-width: 768px){
         font-size: 18px;
@@ -90,4 +123,17 @@
 
 [data-name] {
     cursor: pointer;
+}
+
+
+.qa__table{
+    // border: 1px solid $first-color;
+    padding: 5px;
+}
+
+.qa__th,.qa__td{
+    border: 2px solid $first-color;
+    padding: 5px;
+    color: $first-color;
+    background-color: rgba(255, 255, 255, 0.751);
 }

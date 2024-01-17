@@ -7,3 +7,6 @@ headers.forEach(function (item) {
         this.nextElementSibling.classList.toggle('hidden');
     })
 })
+
+
+

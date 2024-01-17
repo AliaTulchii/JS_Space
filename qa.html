@@ -47,7 +47,7 @@
 
     <main class="main">       
 
-        <section class="qa">
+        <section class="qa scroll">
             <h1 class="qa__title"> <span class="qa__yellow">JavaScript</span> Interview Questions and Answers</h1>
             <div class="qa__list-group">
                 <div class="list-group__item list-header" data-name="accordeon-title">
@@ -73,17 +73,17 @@
                     <h5 class="list-group__item-title">
                         Answer
                     </h5>
-                    <p class="list-group__item-text">
-                        JavaScript has 7 main data types to provide basic functionality
-                        needed for a web application.
-                        * Boolean - for true and false values;
-                        * Null - for empty or unknown values;
-                        * Undefined - for variables that are only declared and not defined or initialized;
-                        * Number - for integer and floating-points values;
-                        * String - for characters and alphanumeric values;
-                        * Object - for collections or complex values;
-                        * Symbols - for unique identifiers or objects;
-                    </p>
+                    <ul class="list-group__item-text">
+                        <p>JavaScript has 7 main data types to provide basic functionality
+                            needed for a web application.</p>
+                        <li>Boolean - for true and false values;</li>
+                        <li>Null - for empty or unknown values;</li>
+                        <li>Undefined - for variables that are only declared and not defined or initialized;</li>
+                        <li>Number - for integer and floating-points values;</li>
+                        <li>String - for characters and alphanumeric values;</li>
+                        <li>Object - for collections or complex values;</li>
+                        <li>Symbols - for unique identifiers or objects;</li>
+                    </ul>
                 </div>
 
 
@@ -94,14 +94,14 @@
                     <h5 class="list-group__item-title">
                         Answer
                     </h5>
-                    <p class="list-group__item-text">
-                        * Lightweight, interpreted programming language;
-                        * Cross-platform compatible;
-                        * Open-source;
-                        * Object-oriented;
-                        * Integration with other backend as well as frontend technologies;
-                        *Used especially for the development of network-based applications;                        
-                    </p>
+                    <ul class="list-group__item-text">
+                        <li>Lightweight, interpreted programming language;</li>
+                        <li>Cross-platform compatible;</li>
+                        <li>Open-source;</li>
+                        <li>Object-oriented;</li>
+                        <li>Integration with other backend as well as frontend technologies;</li>
+                        <li>Used especially for the development of network-based applications;</li>                        
+                    </ul>
                 </div>
 
 
@@ -109,12 +109,155 @@
                     What are the advantages of JavaScript?
                 </div>
                 <div class="list-group__item list-content hidden">
-                    <h5 class="list-group__item-title">What do you understand about JavaScript?</h5>
+                    <h5 class="list-group__item-title">Answer</h5>
+                    <ul class="list-group__item-text">
+                        <li>
+                            <b>Enhanced interaction</b> - JavaScript adds interaction
+                            to otherwise static web pages and makes them react to users' inputs
+                        </li>
+                        <li>
+                            <b>Quick feedback</b> -There is no need for a web page
+                            to reload when running JavaScript
+                        </li>
+                        <li>
+                            <b>Rich User Interface</b> - JavaScript helps in making the
+                            UI of web applications look and feel much better
+                        </li>
+                        <li>
+                            <b>Frameworks</b> - JavaScript has countless frameworks
+                            and libraries that are extensively used for 
+                            developing web applications and games of all kinds
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="list-group__item list-header" data-name="accordeon-title">
+                    How do you create an object in JavaScript?
+                </div>
+                <div class="list-group__item list-content hidden">
+                    <h5 class="list-group__item-title">Answer</h5>
                     <p class="list-group__item-text">
-                        JavaScript is a popular web scripting language and is used 
-                        for client-side and server-side development.
+                        Since JavaScript is essentially an object-
+                        oriented scripting language, it supports the 
+                        usage of objects while developing web applications
+                    </p>
+                    <img src="./images/obj.png" alt="image">
+                </div>
+
+                <div class="list-group__item list-header" data-name="accordeon-title">
+                    How do you create an array in JavaScript?
+                </div>
+                <div class="list-group__item list-content hidden">
+                    <h5 class="list-group__item-title">Answer</h5>
+                    <p class="list-group__item-text">
+                        Here is a very simple way of creating arrays in
+                        JavaScript using the array literal:
+                    </p>
+                    <img src="./images/arr.png" alt="image">
+                </div>
+            
+                <div class="list-group__item list-header" data-name="accordeon-title">
+                    What are some of the built-in methods in JavaScript?
+                </div>
+                <div class="list-group__item list-content hidden">
+                    <h5 class="list-group__item-title">Answer</h5>
+                    <ul class="list-group__item-text">
+                        <li>
+                            JavaScript has many built-in methods to provide 
+                            functionality needed for a web app
+                        </li>
+                        <li>
+                            Some of them are mentioned in this table
+                        </li>
+                    </ul>
+                    <table class="qa__table">
+                        <tr class="qa__tr">
+                            <th class="qa__th">Method</th>
+                            <th class="qa__th">Definition</th>
+                        </tr>
+                        <tr class="qa__tr">
+                            <td class="qa__td">Date()</td>
+                            <td class="qa__td">Returns the present date and time</td>
+                        </tr>
+                        <tr class="qa__tr">
+                            <td class="qa__td">Concat()</td>
+                            <td class="qa__td">Joins two strings and returns the new string</td>
+                        </tr>
+                        <tr class="qa__tr">
+                            <td class="qa__td">Push()</td>
+                            <td class="qa__td">Adds an item to an array</td>
+                        </tr>
+                        <tr class="qa__tr">
+                            <td class="qa__td">Pop()</td>
+                            <td class="qa__td">Removes and also returns the last element of an array</td>
+                        </tr>
+                        <tr class="qa__tr">
+                            <td class="qa__td">Round()</td>
+                            <td class="qa__td">Rounds of the value to the nearest <br>
+                                integer and returns it
+                            <td>
+                        </tr>
+                        <tr class="qa__tr">
+                            <td class="qa__td">Length()</td>
+                            <td class="qa__td">Returns the length of a string</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="list-group__item list-header" data-name="accordeon-title">
+                    
+                </div>
+                <div class="list-group__item list-content hidden">
+                    <h5 class="list-group__item-title"></h5>
+                    <p class="list-group__item-text">
+                        
                     </p>
                 </div>
+                <div class="list-group__item list-header" data-name="accordeon-title">
+                    
+                </div>
+                <div class="list-group__item list-content hidden">
+                    <h5 class="list-group__item-title"></h5>
+                    <p class="list-group__item-text">
+                        
+                    </p>
+                </div>
+                <div class="list-group__item list-header" data-name="accordeon-title">
+                    
+                </div>
+                <div class="list-group__item list-content hidden">
+                    <h5 class="list-group__item-title"></h5>
+                    <p class="list-group__item-text">
+                        
+                    </p>
+                </div>
+                <div class="list-group__item list-header" data-name="accordeon-title">
+                    
+                </div>
+                <div class="list-group__item list-content hidden">
+                    <h5 class="list-group__item-title"></h5>
+                    <p class="list-group__item-text">
+                        
+                    </p>
+                </div>
+                <div class="list-group__item list-header" data-name="accordeon-title">
+                    
+                </div>
+                <div class="list-group__item list-content hidden">
+                    <h5 class="list-group__item-title"></h5>
+                    <p class="list-group__item-text">
+                        
+                    </p>
+                </div>
+                <div class="list-group__item list-header" data-name="accordeon-title">
+                    
+                </div>
+                <div class="list-group__item list-content hidden">
+                    <h5 class="list-group__item-title"></h5>
+                    <p class="list-group__item-text">
+                        
+                    </p>
+                </div>
+
 
                 
             </div>

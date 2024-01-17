@@ -714,8 +714,21 @@ img {
     transform: translate3d(4px, 0, 0);
   }
 }
-ul, ul li {
+.list li {
   list-style: circle;
+}
+
+.qa__title {
+  font-size: 24px;
+  color: hsl(268, 58%, 48%);
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+@media screen and (min-width: 768px) {
+  .qa__title {
+    font-size: 32px;
+  }
 }
 
 .qa {
@@ -758,17 +771,8 @@ ul, ul li {
   outline: 1px solid rgb(130, 112, 144);
 }
 
-.qa__title {
-  font-size: 24px;
-  color: hsl(268, 58%, 48%);
-  font-weight: 700;
-  margin-bottom: 20px;
-  margin-top: 10px;
-}
-@media screen and (min-width: 768px) {
-  .qa__title {
-    font-size: 32px;
-  }
+.qa__violet {
+  color: hsl(252, 94%, 75%);
 }
 
 .list-header {
